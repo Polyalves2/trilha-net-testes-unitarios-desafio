@@ -28,7 +28,7 @@ public class ValidacoesStringTests
     public void DeveContemAPalavraQualquerNoTexto()
     {
         // Arrange
-        var texto = "Matriz";
+        var texto = "Esse é um texto qualquer";
         var textoProcurado = "qualquer";
 
         //TODO: Corrigir a chamada do método "ContemCaractere" da seção Act
@@ -52,7 +52,7 @@ public class ValidacoesStringTests
 
         // Assert
         //TODO: Corrigir o Assert.False com base no retorno da chamada ao método
-        Assert.False(resultado);
+        Assert.False(resultado, textoProcurado);
     }
 
     //TODO: Corrigir a anotação [Fact]
