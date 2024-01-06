@@ -1,4 +1,4 @@
-using Xunit;
+
 
 using TestesUnitarios.Desafio.Console.Services;
 
@@ -19,12 +19,7 @@ public class ValidacoesListaTests
         var resultado = _validacoes.RemoverNumerosNegativos(lista);
 
         // Assert
-        Assert.Equal(resultadoEsperado, resultado);
-    }
-
-    public List<int> RemoverNumerosNegativos(List<int> lista)
-    {
-    return lista.Where(x => x >= 0).ToList();
+        Assert.Equal(resultado, resultadoEsperado);
     }
 
     [Fact]
@@ -38,7 +33,7 @@ public class ValidacoesListaTests
         var resultado = _validacoes.ListaContemDeterminadoNumero(lista, numeroParaProcurar);
 
         // Assert
-        Assert.True(resultado);
+        Assert.True(resultado,numeroParaProcurar);
     }
 
     [Fact]
@@ -54,10 +49,11 @@ public class ValidacoesListaTests
         var resultado = _validacoes.ListaContemDeterminadoNumero(lista, numeroParaProcurar);
 
         // Assert
-        Assert.False(resultado);
+        Assert.False(resultado,numeroParaProcurar);
     }
     
     //TODO: Corrigir a anotação [Fact]
+    [Fact]
     public void DeveMultiplicarOsElementosDaListaPor2()
     {
         //TODO: Implementar método de teste
@@ -70,9 +66,7 @@ public class ValidacoesListaTests
         var resultado = _validacoes.MultiplicarElementosPor2(lista);
 
         // Assert
-        Assert.Equal(resultadoEsperado, resultado);
-    }
-
+        Assert.Equal(resultado, resultadoEsperado);
     }
 
     [Fact]
@@ -84,7 +78,7 @@ public class ValidacoesListaTests
         var lista = new List<int> { 5, -1, -8, 9 };
 
         // Act
-        var resultado = _validacoes.ObterMaiorNumero(lista);
+        var resultado = _validacoes.RetornarMaiorNumeroLista(lista);
 
         // Assert
         //TODO: Corrigir o Assert.Equal com base no retorno da chamada ao método
@@ -106,3 +100,4 @@ public class ValidacoesListaTests
         //TODO: Corrigir o Assert.Equal com base no retorno da chamada ao método
         Assert.Equal(-8, resultado);
     }
+}

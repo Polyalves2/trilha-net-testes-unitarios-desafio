@@ -15,21 +15,21 @@ public class ValidacoesStringTests
 
         // Arrange
         var texto = "Matrix";
-        var resultadoEsperado = texto.Length;
+        var resultadoEsperado = "texto.Length";
 
         // Act
         var resultado = _validacoes.RetornarQuantidadeCaracteres(texto);
 
         // Assert
-        Assert.Equal(resultadoEsperado, resultado);
+        Assert.Equal(resultado, resultadoEsperado);
     }
 
     [Fact]
     public void DeveContemAPalavraQualquerNoTexto()
     {
         // Arrange
-        var texto = "Matriz";
-        var textoProcurado = "qualquer";
+        var texto = "Matrix";
+        var textoProcurado = "texto.Length";
 
         //TODO: Corrigir a chamada do método "ContemCaractere" da seção Act
         // Act
@@ -37,22 +37,22 @@ public class ValidacoesStringTests
 
         // Assert
         //TODO: Corrigir o Assert.True com base no retorno da chamada ao método
-        Assert.True(resultado);
+        Assert.True(resultado, textoProcurado);
     }
 
     [Fact]
     public void NaoDeveConterAPalavraTesteNoTexto()
     {
         // Arrange
-        var texto = "Esse é um texto qualquer";
-        var textoProcurado = "teste";
+        var texto = "Matrix";
+        var textoProcurado = "texto.Length";
 
         // Act
         var resultado = _validacoes.ContemCaractere(texto, textoProcurado);
 
         // Assert
         //TODO: Corrigir o Assert.False com base no retorno da chamada ao método
-        Assert.False(resultado);
+        Assert.False(resultado, textoProcurado);
     }
 
     //TODO: Corrigir a anotação [Fact]
@@ -69,6 +69,6 @@ public class ValidacoesStringTests
         var resultado = _validacoes.TextoTerminaCom(texto, textoProcurado);
 
         // Assert
-        Assert.True(resultado);
+        Assert.True(resultado, textoProcurado);
     }
 }
