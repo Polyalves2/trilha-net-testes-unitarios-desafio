@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4335808c953dd878e84f85453160b3747a426222
 using TestesUnitarios.Desafio.Console.Services;
 
 namespace TestesUnitarios.Desafio.Tests;
@@ -17,7 +22,11 @@ public class ValidacoesListaTests
         var resultado = _validacoes.RemoverNumerosNegativos(lista);
 
         // Assert
+<<<<<<< HEAD
         Assert.Equal(resultadoEsperado, resultado);
+=======
+        Assert.Equal(resultado, resultadoEsperado);
+>>>>>>> 4335808c953dd878e84f85453160b3747a426222
     }
 
     [Fact]
@@ -31,7 +40,7 @@ public class ValidacoesListaTests
         var resultado = _validacoes.ListaContemDeterminadoNumero(lista, numeroParaProcurar);
 
         // Assert
-        Assert.True(resultado);
+        Assert.True(resultado,numeroParaProcurar);
     }
 
     [Fact]
@@ -47,7 +56,11 @@ public class ValidacoesListaTests
         var resultado = _validacoes.ListaContemDeterminadoNumero(lista, numeroParaProcurar);
 
         // Assert
+<<<<<<< HEAD
          Assert.False(resultado);
+=======
+        Assert.False(resultado,numeroParaProcurar);
+>>>>>>> 4335808c953dd878e84f85453160b3747a426222
     }
 
     //TODO: Corrigir a anotação [Fact]
@@ -65,7 +78,11 @@ public class ValidacoesListaTests
 
 
         // Assert
+<<<<<<< HEAD
         Assert.Equal(resultadoEsperado, resultado);
+=======
+        Assert.Equal(resultado, resultadoEsperado);
+>>>>>>> 4335808c953dd878e84f85453160b3747a426222
     }
 
     [Fact]
@@ -100,6 +117,7 @@ public class ValidacoesListaTests
         Assert.Equal(-8, resultado);
     }
 }
+<<<<<<< HEAD
 
 
 
@@ -218,3 +236,5 @@ public class ValidacoesListaTests
 //     Assert.Equal(-8, resultado);
 // }
 
+=======
+>>>>>>> 4335808c953dd878e84f85453160b3747a426222
